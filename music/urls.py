@@ -16,9 +16,11 @@ Including another URLconf
 from django.contrib import admin
 from django.conf import settings
 from django.urls import include, path
+from mymusic import views as mymusic_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('albums', mymusic_views.list_albums, name='list_albums'),
 ]
 
 if settings.DEBUG:
@@ -29,3 +31,6 @@ if settings.DEBUG:
         # For django versions before 2.0:
         # url(r'^__debug__/', include(debug_toolbar.urls)),
     ] + urlpatterns
+
+
+      # path('', contacts_views.list_contacts, name='list_contacts'),

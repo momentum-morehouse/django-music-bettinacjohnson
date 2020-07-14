@@ -8,8 +8,8 @@ from .models import Album
 # Create your views here.
 
 def list_albums(request):
-  mymusic = Album.objects.all()
-  return render(request, "albums/list_albums.html",                        {"mymusic": mymusic})
+  albums = Album.objects.all()
+  return render(request, "albums/list_albums.html",                        {"albums": albums})
 
 # def index(request):
   # albums = Album.object.all()

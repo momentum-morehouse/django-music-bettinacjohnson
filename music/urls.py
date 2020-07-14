@@ -18,8 +18,11 @@ from django.conf import settings
 from django.urls import include, path
 from mymusic import views as mymusic_views
 
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+    # path('', mymusic_views.index, name="home"), 
+    #getting the homepage and it is called index
     path('albums', mymusic_views.list_albums, name='list_albums'),
 ]
 

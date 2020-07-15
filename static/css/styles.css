@@ -1,3 +1,11 @@
 .original {
-background-color: #B2E4DB;
+display: flex;
+flex-direction: row;
+/* flex-wrap: wrap; */
+column-gap: 100px;
+justify-content: space-evenly;
+}
+
+.body {
+  text-align: center;
 }
